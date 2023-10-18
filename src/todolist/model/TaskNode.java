@@ -4,7 +4,6 @@
  */
 package todolist.model;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -16,18 +15,12 @@ public class TaskNode {
     private String id;
     private String title;
     private String description;
-    private LocalDate due_date;
+    private Date due_date;
     private String status; 
     
     public TaskNode next;
 
-    public TaskNode(String id, String title, String description, LocalDate due_date, String status) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.due_date = due_date;
-        this.status = status;
-    }
+  
     
     /**
      * @return the id
@@ -74,14 +67,14 @@ public class TaskNode {
     /**
      * @return the due_date
      */
-    public LocalDate getDue_date() {
+    public Date getDue_date() {
         return due_date;
     }
 
     /**
      * @param due_date the due_date to set
      */
-    public void setDue_date(LocalDate due_date) {
+    public void setDue_date(Date due_date) {
         this.due_date = due_date;
     }
 

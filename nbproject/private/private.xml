@@ -5,8 +5,7 @@
         <group>
             <file>file:/C:/Users/Thilina/Documents/NetBeansProjects/TodoList/src/todolist/TodoList.java</file>
             <file>file:/C:/Users/Thilina/Documents/NetBeansProjects/TodoList/src/todolist/view/MainFrame.java</file>
-            <file>file:/C:/Users/Thilina/Documents/NetBeansProjects/TodoList/src/todolist/dao/TaskListDAO.java</file>
-            <file>file:/C:/Users/Thilina/Documents/NetBeansProjects/TodoList/src/todolist/daoimpl/TaskListDAOImpl.java</file>
+            <file>file:/C:/Users/Thilina/Documents/NetBeansProjects/TodoList/src/todolist/model/TaskNode.java</file>
         </group>
     </open-files>
 </project-private>

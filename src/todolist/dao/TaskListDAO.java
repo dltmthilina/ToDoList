@@ -17,7 +17,7 @@ public interface TaskListDAO {
     
     public void addTaskFront(TaskNode task, TaskList list);
     public void addTaskEnd(TaskNode task);
-    public void editTask(String id, String newTitle, String newDescription, LocalDate newDueDate, String newStatus);
+    public void editTask(String id, String newTitle, String newDescription, Date newDueDate, String newStatus);
     public void deleteTask(String taskId);
     public void writeToFile(TaskNode task);
     public void findTask(String taskId);

@@ -25,30 +25,7 @@ public class TaskListDAOImpl implements TaskListDAO{
 
     @Override
     public void readTaskList(TaskList list) {
-        if(list.head==null){
-            System.out.println("No task to read");
-        }else{
-            TaskNode current = list.head;
-            while(current.next!=null){
-              
-                System.out.println("************Task:" +current.getId() +"*************");
-                System.out.println(current.getTitle());
-                System.out.println(current.getDescription());
-                System.out.println(current.getDue_date());
-                System.out.println(current.getStatus());
-                
-                current = current.next;
-            }
-            if(current.next==null){
-                System.out.println("************Task:" +current.getId() +"*************");
-                System.out.println(current.getTitle());
-                System.out.println(current.getDescription());
-                System.out.println(current.getDue_date());
-                System.out.println(current.getStatus());
-                System.out.println("************Task Manager*************");
-            }
-            
-        }   
+        
     }
     
  
@@ -78,7 +55,7 @@ public class TaskListDAOImpl implements TaskListDAO{
     
 
     @Override
-    public void editTask(String id, String newTitle, String newDescription, LocalDate newDueDate, String newStatus) {
+    public void editTask(String id, String newTitle, String newDescription, Date newDueDate, String newStatus) {
         TaskNode current = head;
         while(current.getId()!=id){
             current = current.next;

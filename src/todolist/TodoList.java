@@ -18,6 +18,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.ZoneId;
+import java.util.Date;
 
 
 /**
@@ -37,14 +39,7 @@ public class TodoList {
         SwingUtilities.invokeLater(() -> {
             createWelcomeFrame();
         });
-            
-        
-        while(true){
-            TaskNode newTask = insertTask();
-            taskListService.addTaskFront(newTask, newList);
-            taskListService.readTaskList(newList);
-        }
-        
+              
     }
     
     public static void createWelcomeFrame(){
@@ -73,31 +68,5 @@ public class TodoList {
         mainframe.setSize(600, 400);
         mainframe.setVisible(true);
         
-    }
-    
-    public static TaskNode insertTask(){
-        
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("Enter the id of the task:" + " ");
-        String id = scanner.nextLine();
-        
-        System.out.print("Enter the title of the task:" + " ");
-        String title = scanner.nextLine();
-        
-         System.out.print("Enter the description of the task:" + " ");
-        String description = scanner.nextLine();
-
-        System.out.print("Enter the due date of the task (YYYY-MM-DD):" + " ");
-        String dueDateString = scanner.nextLine();
-        LocalDate dueDate = LocalDate.parse(dueDateString);
-
-        System.out.print("Enter the status of the task (To do, In progress, or Done):" + " ");
-        String status = scanner.nextLine();
-
-        return new TaskNode(id,title,description, dueDate, status);
-    }
-    
-    
-    
+    } 
 }
